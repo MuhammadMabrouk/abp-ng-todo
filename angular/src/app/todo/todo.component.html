@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">
+        {{ '::TodoList' | abpLocalization }}:
+      </div>
+    </div>
+
+    <div class="card-body">
+      <!-- FORM FOR NEW TODO ITEMS -->
+      <form class="d-flex align-items-center gap-2 mb-2" (ngSubmit)="createTodoItem()">
+        <div class="input-group flex-grow-1">
+          <input
+            class="form-control"
+            type="text"
+            name="NewTodoText"
+            [placeholder]="'::EnterText' | abpLocalization"
+            [(ngModel)]="newTodoText"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          {{ '::Submit' | abpLocalization }}
+        </button>
+      </form>
+
+      <!-- TODO ITEMS LIST -->
+      <ul class="TodoList">
+        <li class="p-2" *ngFor="let todoItem of todoItems">
+          <i class="fa fa-trash-o fs-5 me-1" (click)="deleteTodoItem(todoItem.id)"></i>
+          {{ todoItem.text }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

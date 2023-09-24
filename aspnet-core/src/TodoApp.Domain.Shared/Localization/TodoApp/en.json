@@ -1,0 +1,13 @@
+{
+  "culture": "en",
+  "texts": {
+    "Menu:Home": "Home",
+    "Menu:Todo": "Todo",
+    "Welcome": "Welcome",
+    "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
+    "TodoList": "Todo List",
+    "EnterText": "Enter text...",
+    "Submit": "Submit",
+    "TodoItemDeleteMsg": "Todo item has been deleted."
+  }
+}
