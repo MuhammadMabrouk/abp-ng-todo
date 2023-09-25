@@ -1,5 +1,6 @@
 
 export interface TodoItemDto {
   id?: string;
-  text?: string;
+  enText?: string;
+  arText?: string;
 }

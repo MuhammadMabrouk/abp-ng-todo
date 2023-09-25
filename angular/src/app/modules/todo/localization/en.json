@@ -1,6 +1,7 @@
 {
   "TodoList": "Todo List",
-  "EnterText": "Enter text...",
+  "EnglishText": "English text...",
+  "ArabicText": "Arabic text...",
   "Submit": "Submit",
   "TodoItemDeleteMsg": "Todo item has been deleted."
 }

@@ -6,11 +6,20 @@ import { CoreModule } from '@abp/ng.core';
 import { SharedModule } from 'src/app/modules/shared/shared.module';
 import { TodoRoutingModule } from './todo-routing.module';
 
+// components
 import { TodoComponent } from './todo.component';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { TodoFormComponent } from './components/todo-form/todo-form.component';
+
+const components = [
+  TodoComponent,
+  TodoListComponent,
+  TodoFormComponent,
+];
 
 @NgModule({
   declarations: [
-    TodoComponent
+    ...components,
   ],
   imports: [
     SharedModule,

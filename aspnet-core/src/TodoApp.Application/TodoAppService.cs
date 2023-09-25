@@ -23,20 +23,26 @@ namespace TodoApp
           .Select(item => new TodoItemDto
           {
             Id = item.Id,
-            Text = item.Text
+            EnText = item.EnText,
+            ArText = item.ArText
           }).ToList();
     }
 
-    public async Task<TodoItemDto> CreateAsync(string text)
+    public async Task<TodoItemDto> CreateAsync(string enText, string arText)
     {
       var todoItem = await _todoItemRepository.InsertAsync(
-          new TodoItem { Text = text }
+        new TodoItem
+        {
+          EnText = enText,
+          ArText = arText
+        }
       );
 
       return new TodoItemDto
       {
         Id = todoItem.Id,
-        Text = todoItem.Text
+        EnText = todoItem.EnText,
+        ArText = todoItem.ArText
       };
     }
 

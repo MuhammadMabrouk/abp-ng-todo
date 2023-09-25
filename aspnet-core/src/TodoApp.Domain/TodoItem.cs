@@ -5,6 +5,7 @@ namespace TodoApp
 {
   public class TodoItem : BasicAggregateRoot<Guid>
   {
-    public string Text { get; set; }
+    public string EnText { get; set; }
+    public string ArText { get; set; }
   }
 }

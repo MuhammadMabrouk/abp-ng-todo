@@ -7,30 +7,17 @@
     </div>
 
     <div class="card-body">
-      <!-- FORM FOR NEW TODO ITEMS -->
-      <form class="d-flex align-items-center gap-2 mb-2" (ngSubmit)="createTodoItem()">
-        <div class="input-group flex-grow-1">
-          <input
-            class="form-control"
-            type="text"
-            name="NewTodoText"
-            [placeholder]="'Todo::EnterText' | abpLocalization"
-            [(ngModel)]="newTodoText"
-          />
-        </div>
 
-        <button type="submit" class="btn btn-primary">
-          {{ 'Todo::Submit' | abpLocalization }}
-        </button>
-      </form>
+      <!-- FORM FOR NEW TODO ITEMS -->
+      <app-todo-form
+        (onCreateItem)="createTodoItem($event)"
+      ></app-todo-form>
 
       <!-- TODO ITEMS LIST -->
-      <ul class="TodoList">
-        <li class="p-2" *ngFor="let todoItem of todoItems">
-          <i class="fa fa-trash-o fs-5 me-1" (click)="deleteTodoItem(todoItem.id)"></i>
-          {{ todoItem.text }}
-        </li>
-      </ul>
+      <app-todo-list
+        [items]="todoItems"
+        (onDeleteItem)="deleteTodoItem($event)"
+      ></app-todo-list>
     </div>
   </div>
 </div>

@@ -1,6 +1,7 @@
 {
   "TodoList": "قائمة المهمات",
-  "EnterText": "أدخل النص ...",
+  "EnglishText": "النص الانجليزي ...",
+  "ArabicText": "النص العربي ...",
   "Submit": "حفظ",
   "TodoItemDeleteMsg": "تم حذف عنصر المهام."
 }

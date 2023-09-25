@@ -1,0 +1,33 @@
+<form
+  class="d-flex flex-column flex-md-row align-items-stretch align-items-md-center gap-2 mb-4 mb-md-2"
+  (ngSubmit)="createTodoItem()"
+>
+  <div class="d-flex flex-column flex-md-row align-items-center gap-2 flex-grow-1">
+
+    <!-- english text -->
+    <div class="input-group flex-grow-1">
+      <input
+        class="form-control"
+        type="text"
+        name="NewTodoEnglishText"
+        [placeholder]="'Todo::EnglishText' | abpLocalization"
+        [(ngModel)]="newTodoEnglishText"
+      />
+    </div>
+
+    <!-- arabic text -->
+    <div class="input-group flex-grow-1">
+      <input
+        class="form-control"
+        type="text"
+        name="NewTodoArabicText"
+        [placeholder]="'Todo::ArabicText' | abpLocalization"
+        [(ngModel)]="newTodoArabicText"
+      />
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">
+    {{ 'Todo::Submit' | abpLocalization }}
+  </button>
+</form>

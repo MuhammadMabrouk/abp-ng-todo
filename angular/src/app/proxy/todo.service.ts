@@ -9,11 +9,11 @@ export class TodoService {
   apiName = 'Default';
   
 
-  create = (text: string, config?: Partial<Rest.Config>) =>
+  create = (enText: string, arText: string, config?: Partial<Rest.Config>) =>
     this.restService.request<any, TodoItemDto>({
       method: 'POST',
       url: '/api/app/todo',
-      params: { text },
+      params: { enText, arText },
     },
     { apiName: this.apiName,...config });
   
