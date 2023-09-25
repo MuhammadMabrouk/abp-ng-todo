@@ -5,7 +5,11 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
+    loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
+  },
+  {
+    path: 'todo',
+    loadChildren: () => import('./modules/todo/todo.module').then(m => m.TodoModule)
   },
   {
     path: 'account',
@@ -25,7 +29,6 @@ const routes: Routes = [
     loadChildren: () =>
       import('@abp/ng.setting-management').then(m => m.SettingManagementModule.forLazy()),
   },
-  { path: 'todo', loadChildren: () => import('./todo/todo.module').then(m => m.TodoModule) },
 ];
 
 @NgModule({

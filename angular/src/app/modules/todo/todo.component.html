@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card-header">
       <div class="card-title">
-        {{ '::TodoList' | abpLocalization }}:
+        {{ 'Todo::TodoList' | abpLocalization }}:
       </div>
     </div>
 
@@ -14,13 +14,13 @@
             class="form-control"
             type="text"
             name="NewTodoText"
-            [placeholder]="'::EnterText' | abpLocalization"
+            [placeholder]="'Todo::EnterText' | abpLocalization"
             [(ngModel)]="newTodoText"
           />
         </div>
 
         <button type="submit" class="btn btn-primary">
-          {{ '::Submit' | abpLocalization }}
+          {{ 'Todo::Submit' | abpLocalization }}
         </button>
       </form>
 

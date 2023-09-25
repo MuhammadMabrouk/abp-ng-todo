@@ -54,7 +54,7 @@ export class TodoComponent implements OnInit {
         {
           next: () => {
             this.todoItems = this.todoItems.filter(item => item.id !== id);
-            this.toasterSer.info(this.localizationSer.instant('::TodoItemDeleteMsg'));
+            this.toasterSer.info(this.localizationSer.instant('Todo::TodoItemDeleteMsg'));
           },
           error: (err) => {
             console.log(err);
