@@ -3,5 +3,7 @@
   "EnglishText": "English text...",
   "ArabicText": "Arabic text...",
   "Submit": "Submit",
+  "TodoItemConfirmDeleteTitle": "Are you sure?",
+  "TodoItemConfirmDeleteMsg": "This item will be deleted",
   "TodoItemDeleteMsg": "Todo item has been deleted."
 }

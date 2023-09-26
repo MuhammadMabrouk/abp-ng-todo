@@ -3,5 +3,7 @@
   "EnglishText": "النص الانجليزي ...",
   "ArabicText": "النص العربي ...",
   "Submit": "حفظ",
+  "TodoItemConfirmDeleteTitle": "هل أنت متأكد؟",
+  "TodoItemConfirmDeleteMsg": "سيتم حذف هذا العنصر",
   "TodoItemDeleteMsg": "تم حذف عنصر المهام."
 }

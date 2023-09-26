@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { LocalizationService } from '@abp/ng.core';
-import { ToasterService } from '@abp/ng.theme.shared';
+import { ConfirmationService, Confirmation, ToasterService } from '@abp/ng.theme.shared';
 import { TodoService } from '@proxy';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-todo-list',
@@ -19,6 +20,7 @@ export class TodoListComponent implements OnInit {
   constructor(
     private localizationSer: LocalizationService,
     private todoSer: TodoService,
+    private confirmationSer: ConfirmationService,
     private toasterSer: ToasterService,
   ) {}
 
@@ -31,10 +33,17 @@ export class TodoListComponent implements OnInit {
   }
 
   deleteTodoItem(id: string): void {
-    this.todoSer.delete(id)
-      .subscribe(() => {
-        this.onDeleteItem.emit(id);
-        this.toasterSer.info(this.localizationSer.instant('Todo::TodoItemDeleteMsg'));
+    this.confirmationSer
+      .warn('Todo::TodoItemConfirmDeleteMsg', 'Todo::TodoItemConfirmDeleteTitle')
+      .pipe(take(1))
+      .subscribe((status: Confirmation.Status) => {
+        if (status == 'confirm') {
+          this.todoSer.delete(id)
+            .subscribe(() => {
+              this.onDeleteItem.emit(id);
+              this.toasterSer.info('Todo::TodoItemDeleteMsg');
+            });
+        }
       });
   }
 }
