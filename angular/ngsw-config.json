@@ -11,11 +11,11 @@
           "/index.html",
           "/manifest.webmanifest",
           "/*.css",
-          "/common-es2015.*.js",
-          "/main-es2015.*.js",
-          "/polyfills-es2015.*.js",
-          "/runtime-es2015.*.js",
-          "/vendor-es2015.*.js"
+          "/common.*.js",
+          "/main.*.js",
+          "/polyfills.*.js",
+          "/runtime.*.js",
+          "/vendor.*.js"
         ]
       }
     },
@@ -25,12 +25,12 @@
       "updateMode": "prefetch",
       "resources": {
         "files": [
-          "/*-es2015.*.js",
-          "!/common-es2015.*.js",
-          "!/main-es2015.*.js",
-          "!/polyfills-es2015.*.js",
-          "!/runtime-es2015.*.js",
-          "!/vendor-es2015.*.js"
+          "/*.*.js",
+          "!/common.*.js",
+          "!/main.*.js",
+          "!/polyfills.*.js",
+          "!/runtime.*.js",
+          "!/vendor.*.js"
         ]
       }
     },
