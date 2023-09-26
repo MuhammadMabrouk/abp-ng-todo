@@ -17,14 +17,9 @@ export class TodoFormComponent {
 
   createTodoItem(): void {
     this.todoSer.create(this.newTodoEnglishText, this.newTodoArabicText)
-      .subscribe({
-        next: (result) => {
-          this.onCreateItem.emit(result);
-          this.newTodoEnglishText = this.newTodoArabicText = null;
-        },
-        error: (err) => {
-          console.log(err);
-        },
+      .subscribe(result => {
+        this.onCreateItem.emit(result);
+        this.newTodoEnglishText = this.newTodoArabicText = null;
       });
   }
 }

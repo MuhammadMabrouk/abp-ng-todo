@@ -32,16 +32,9 @@ export class TodoListComponent implements OnInit {
 
   deleteTodoItem(id: string): void {
     this.todoSer.delete(id)
-      .subscribe(
-        {
-          next: () => {
-            this.onDeleteItem.emit(id);
-            this.toasterSer.info(this.localizationSer.instant('Todo::TodoItemDeleteMsg'));
-          },
-          error: (err) => {
-            console.log(err);
-          },
-        }
-      );
+      .subscribe(() => {
+        this.onDeleteItem.emit(id);
+        this.toasterSer.info(this.localizationSer.instant('Todo::TodoItemDeleteMsg'));
+      });
   }
 }

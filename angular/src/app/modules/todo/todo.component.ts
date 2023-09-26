@@ -17,15 +17,7 @@ export class TodoComponent implements OnInit {
   }
 
   getTodoList(): void {
-    this.todoSer.getList()
-      .subscribe({
-        next: (res) => {
-          this.todoItems = res;
-        },
-        error: (err) => {
-          console.log(err);
-        },
-      });
+    this.todoSer.getList().subscribe(res => this.todoItems = res);
   }
 
   createTodoItem(todoItem: TodoItemDto): void {
