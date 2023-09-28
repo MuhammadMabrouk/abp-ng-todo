@@ -1,6 +1,8 @@
 {
   "culture": "ar",
   "texts": {
+    "Font:Url": "https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap",
+    "Font:Family": "'Tajawal', sans-serif",
     "Menu:Home": "الرئيسية",
     "Menu:Todo": "المهمات"
   }

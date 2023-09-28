@@ -1,6 +1,8 @@
 {
   "culture": "en",
   "texts": {
+    "Font:Url": "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap",
+    "Font:Family": "'Roboto', sans-serif",
     "Menu:Home": "Home",
     "Menu:Todo": "Todo"
   }

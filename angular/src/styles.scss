@@ -29,3 +29,10 @@
   }
 
 }
+
+.abp-toast-close-button {
+  [dir='rtl'] & {
+    right: auto !important;
+    left: 0;
+  }
+}
