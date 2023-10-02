@@ -1,29 +1,29 @@
 <abp-modal [(visible)]="isOpen">
   <ng-template #abpHeader>
-    <h3 class="mb-0">{{ data.userName }}</h3>
+    <h3 class="mb-0">{{ userData.userName }}</h3>
   </ng-template>
 
   <ng-template #abpBody>
     <ul class="details-list list-unstyled mb-0">
       <li class="details-list-item">
         <strong>{{ 'AbpIdentity::DisplayName:Name' | abpLocalization }}</strong>
-        <span>{{ data.name }}</span>
+        <span>{{ userData.name }}</span>
       </li>
       <li class="details-list-item">
         <strong>{{ 'AbpIdentity::DisplayName:Surname' | abpLocalization }}</strong>
-        <span>{{ data.surname }}</span>
+        <span>{{ userData.surname }}</span>
       </li>
       <li class="details-list-item">
         <strong>{{ 'AbpIdentity::EmailAddress' | abpLocalization }}</strong>
-        <span>{{ data.email }}</span>
+        <span>{{ userData.email }}</span>
       </li>
       <li class="details-list-item">
         <strong>{{ 'AbpIdentity::PhoneNumber' | abpLocalization }}</strong>
-        <span>{{ data.phoneNumber }}</span>
+        <span>{{ userData.phoneNumber }}</span>
       </li>
       <li class="details-list-item">
         <strong>{{ 'AbpIdentity::CreationTime' | abpLocalization }}</strong>
-        <span>{{ data.creationTime | date }}</span>
+        <span>{{ userData.creationTime | date }}</span>
       </li>
     </ul>
   </ng-template>
