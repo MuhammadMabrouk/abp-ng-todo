@@ -9,9 +9,11 @@ import { IdentityExtendedRoutingModule } from './identity-extended-routing.modul
 
 // components
 import { IdentityExtendedComponent } from './identity-extended.component';
+import { UserQuickViewModalComponent } from './components/user-quick-view-modal/user-quick-view-modal.component';
 
 const components = [
   IdentityExtendedComponent,
+  UserQuickViewModalComponent,
 ];
 
 @NgModule({

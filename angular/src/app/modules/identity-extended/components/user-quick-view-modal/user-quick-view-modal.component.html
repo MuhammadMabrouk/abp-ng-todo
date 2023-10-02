@@ -1,0 +1,36 @@
+<abp-modal [(visible)]="isOpen">
+  <ng-template #abpHeader>
+    <h3 class="mb-0">{{ data.userName }}</h3>
+  </ng-template>
+
+  <ng-template #abpBody>
+    <ul class="details-list list-unstyled mb-0">
+      <li class="details-list-item">
+        <strong>{{ 'AbpIdentity::DisplayName:Name' | abpLocalization }}</strong>
+        <span>{{ data.name }}</span>
+      </li>
+      <li class="details-list-item">
+        <strong>{{ 'AbpIdentity::DisplayName:Surname' | abpLocalization }}</strong>
+        <span>{{ data.surname }}</span>
+      </li>
+      <li class="details-list-item">
+        <strong>{{ 'AbpIdentity::EmailAddress' | abpLocalization }}</strong>
+        <span>{{ data.email }}</span>
+      </li>
+      <li class="details-list-item">
+        <strong>{{ 'AbpIdentity::PhoneNumber' | abpLocalization }}</strong>
+        <span>{{ data.phoneNumber }}</span>
+      </li>
+      <li class="details-list-item">
+        <strong>{{ 'AbpIdentity::CreationTime' | abpLocalization }}</strong>
+        <span>{{ data.creationTime | date }}</span>
+      </li>
+    </ul>
+  </ng-template>
+
+  <ng-template #abpFooter>
+    <button type="button" class="btn btn-secondary" abpClose>
+      {{ 'AbpUi::Close' | abpLocalization }}
+    </button>
+  </ng-template>
+</abp-modal>
