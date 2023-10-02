@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { IdentityModule } from '@abp/ng.identity';
 import { IdentityExtendedComponent } from './identity-extended.component';
 import { identityEntityActionContributors } from './contributors/entity-action-contributors';
+import { identityEntityPropContributors } from './contributors/entity-prop-contributors';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
         loadChildren: () =>
           IdentityModule.forLazy({
             entityActionContributors: identityEntityActionContributors,
+            entityPropContributors: identityEntityPropContributors,
           }),
       },
     ],
