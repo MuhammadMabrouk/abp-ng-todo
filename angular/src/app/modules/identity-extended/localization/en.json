@@ -1,5 +1,8 @@
 {
+  "DoNotClickMe": "Don't Click Me!",
+  "Name": "Name",
   "QuickView": "Quick View",
+  "FirstUserQuickView": "First User Quick View",
   "Confirmed": "Confirmed",
   "Unconfirmed": "Unconfirmed"
 }

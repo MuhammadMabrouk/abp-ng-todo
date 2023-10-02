@@ -1,5 +1,8 @@
 {
+  "DoNotClickMe": "لا تضغط هنا!",
+  "Name": "الاسم",
   "QuickView": "نظرة سريعة",
+  "FirstUserQuickView": "نظرة سريعة للمستخدم الأول",
   "Confirmed": "تم التأكيد",
   "Unconfirmed": "غير مؤكد"
 }

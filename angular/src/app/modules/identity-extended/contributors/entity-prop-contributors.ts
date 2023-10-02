@@ -7,7 +7,7 @@ import { of } from 'rxjs';
 const nameProp = new EntityProp<IdentityUserDto>({
   type: ePropType.String,
   name: 'name',
-  displayName: 'AbpIdentity::Name',
+  displayName: 'Identity::Name',
   sortable: true,
   columnWidth: 250,
 });
@@ -21,7 +21,7 @@ export function emailPropContributor(propList: EntityPropList<IdentityUserDto>) 
   const droppedNode = propList.dropByIndex(index);
   const emailProp = new EntityProp<IdentityUserDto>({
     ...droppedNode.value,
-    valueResolver: data => {
+    valueResolver: (data) => {
       const { email, emailConfirmed } = data.record;
       const localizationSer = data.getInjected(LocalizationService);
       const confirmedTxt = localizationSer.instant('Identity::Confirmed');
@@ -48,7 +48,7 @@ export function phonePropContributor(propList: EntityPropList<IdentityUserDto>) 
   const droppedNode = propList.dropByIndex(index);
   const phoneProp = new EntityProp<IdentityUserDto>({
     ...droppedNode.value,
-    valueResolver: data => {
+    valueResolver: (data) => {
       const { phoneNumber, phoneNumberConfirmed } = data.record;
       const localizationSer = data.getInjected(LocalizationService);
       const confirmedTxt = localizationSer.instant('Identity::Confirmed');
