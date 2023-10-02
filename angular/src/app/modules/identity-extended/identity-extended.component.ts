@@ -18,4 +18,8 @@ export class IdentityExtendedComponent {
     });
     this.isUserQuickViewVisible = true;
   }
+
+  closeUserQuickView() {
+    this.isUserQuickViewVisible = false;
+  }
 }

@@ -1,4 +1,4 @@
-<abp-modal [(visible)]="isOpen">
+<abp-modal [(visible)]="isOpen" (disappear)="closeModal()">
   <ng-template #abpHeader>
     <h3 class="mb-0">{{ userData.userName }}</h3>
   </ng-template>

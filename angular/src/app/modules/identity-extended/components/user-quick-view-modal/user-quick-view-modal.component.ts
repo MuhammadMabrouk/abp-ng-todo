@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { IdentityUserDto } from '@abp/ng.identity/proxy';
 
 @Component({
@@ -11,4 +11,9 @@ export class UserQuickViewModalComponent {
   @Input() isOpen: boolean;
   @Input() userData: IdentityUserDto;
 
+  @Output() close = new EventEmitter<boolean>();
+
+  closeModal() {
+    this.close.emit(false);
+  }
 }
