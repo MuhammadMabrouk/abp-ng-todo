@@ -10,13 +10,13 @@
 
       <!-- FORM FOR NEW TODO ITEMS -->
       <app-todo-form
-        (onCreateItem)="createTodoItem($event)"
+        (onCreateItem)="addTodoItemToView($event)"
       ></app-todo-form>
 
       <!-- TODO ITEMS LIST -->
       <app-todo-list
         [items]="todoItems"
-        (onDeleteItem)="deleteTodoItem($event)"
+        (onDeleteItem)="deleteTodoItemFromView($event)"
       ></app-todo-list>
     </div>
   </div>

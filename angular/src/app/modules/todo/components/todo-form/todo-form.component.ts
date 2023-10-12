@@ -15,7 +15,7 @@ export class TodoFormComponent {
 
   constructor(private todoSer: TodoService) {}
 
-  createTodoItem(): void {
+  addTodoItemToServer(): void {
     this.todoSer.create(this.newTodoEnglishText, this.newTodoArabicText)
       .subscribe(result => {
         this.onCreateItem.emit(result);

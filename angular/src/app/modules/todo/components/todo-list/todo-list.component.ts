@@ -32,7 +32,7 @@ export class TodoListComponent implements OnInit {
     this.lang = this.localizationSer.currentLang;
   }
 
-  deleteTodoItem(id: string): void {
+  deleteTodoItemFromServer(id: string): void {
     this.confirmationSer
       .warn('Todo::TodoItemConfirmDeleteMsg', 'Todo::TodoItemConfirmDeleteTitle')
       .pipe(take(1))

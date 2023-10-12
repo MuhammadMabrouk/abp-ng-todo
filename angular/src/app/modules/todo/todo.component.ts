@@ -20,11 +20,11 @@ export class TodoComponent implements OnInit {
     this.todoSer.getList().subscribe(res => this.todoItems = res);
   }
 
-  createTodoItem(todoItem: TodoItemDto): void {
+  addTodoItemToView(todoItem: TodoItemDto): void {
     this.todoItems = this.todoItems.concat(todoItem);
   }
 
-  deleteTodoItem(id: string): void {
+  deleteTodoItemFromView(id: string): void {
     this.todoItems = this.todoItems.filter(item => item.id !== id);
   }
 }

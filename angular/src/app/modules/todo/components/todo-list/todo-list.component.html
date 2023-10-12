@@ -1,6 +1,9 @@
 <ul class="TodoList">
   <li class="p-2" *ngFor="let todoItem of items">
-    <i class="fa fa-trash-o fs-5 me-1" (click)="deleteTodoItem(todoItem.id)"></i>
+    <i
+      class="fa fa-trash-o fs-5 me-1"
+      (click)="deleteTodoItemFromServer(todoItem.id)"
+    ></i>
     {{ todoItem[lang == 'ar' ? 'arText' : 'enText'] }}
   </li>
 </ul>
